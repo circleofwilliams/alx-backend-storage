@@ -5,4 +5,5 @@ This repository contains folders that has files that answers advanced SQL concep
   2. SQL procedures
   3. NoSQL
   4. MongoDb
+  5. Redis
   ...
