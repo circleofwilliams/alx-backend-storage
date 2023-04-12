@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-'''Demonstrate Python and mongoDB
-'''
+""" Update School """
+import pymongo
+from typing import List
 
 
 def update_topics(mongo_collection, name, topics):
-    '''changes all topics of a school document based on the name
-    '''
-    mongo_collection.update_many(
-    {"name": name },
-    {'$set': {"topics": topics }}
-)
-if __name__ == "__main__":
-    update_topics(mongo_collection, name, topics)
+    """ Change the data
+    
+        Args:
+            mongo_collection:
+            name: School
+            topics: School name
+
+        Return:
+            Nothing
+    """
+    query: dict = {'name': name}
+    mongo_collection.update_many(query, {"$set": {"topics": topics}})
+
